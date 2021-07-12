@@ -19,7 +19,8 @@ router.get("/api/workouts", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      res.json(err);
+      res.json(error);
+      console.log('error in /api/workouts')
     });
 });
 
@@ -30,6 +31,7 @@ router.post("/api/workouts", (req, res) => {
     })
     .catch((err) => {
       res.json(error);
+      console.log('error in /api/workouts')
     });
 });
 
@@ -39,7 +41,8 @@ router.put("/api/workouts/:id", (req, res) => {
     res.json(data)
   })
   .catch((err) => {
-      res.json(error)
+      res.json(error);
+      console.log('error in /api/workouts/:id')
   })
 });
 
@@ -59,7 +62,8 @@ router.get("/api/workouts/range", (req,res) => {
         res.json(data)
     })
     .catch((err) => {
-        res.json(error)
+        res.json(error);
+        console.log('error in /api/workouts/range')
     })
 })
 
